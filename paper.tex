@@ -1,0 +1,93 @@
+\documentclass[journal]{IEEEtran}
+\ifCLASSINFOpdf
+\else
+\fi
+\hyphenation{op-tical net-works semi-conduc-tor}
+\usepackage{graphicx}
+ %\usepackage{wrapfig}
+\usepackage{amsmath}
+\usepackage[document]{ragged2e}
+\usepackage[export]{adjustbox}
+% \usepackage{subcaption}
+% \usepackage{biblatex}
+%\addbibresource{citation.bib}
+\graphicspath{ {./images/} }
+
+\begin{document}
+\title{Design a Low-Power\\VCO-based ADC for IoT Application}
+
+%\author{Dinh-Toi~Nguyen,~\IEEEmembership{Member,~IEEE,}
+%        Duy-Hieu~Bui,~\IEEEmembership{Fellow,~OSA,}}% <-this % stops a space
+\author{Dinh-Toi~$Nguyen^{1}$, Duy-Hieu~$Bui^{2}$ and Xuan-Tu~$Tran^{2}$\\
+$^{1}University of Engineering and Technology, Vietnam National University, Hanoi, Vietnam$\\
+$^{2}Information Technology Institute, Vietnam National University, Hanoi, Vietnam$\\
+$^{*}Email: hieubd@vnu.edu.vn$}
+
+%\thanks{M. Shell was with the Department
+%of Electrical and Computer Engineering, Georgia Institute of Technology, Atlanta,
+%GA, 30332 USA e-mail: (see http://www.michaelshell.org/contact.html).}% <-this % stops a space
+%\thanks{J. Doe and J. Doe are with Anonymous University.}% <-this % stops a space
+%\thanks{Manuscript received April 19, 2005; revised August 26, 2015.}}
+
+% The paper headers
+%\markboth{Journal of \LaTeX\ Class Files,~Vol.~14, No.~8, August~2015}%
+%{Shell \MakeLowercase{\textit{et al.}}: Bare Demo of IEEEtran.cls for IEEE Journals}
+
+\maketitle
+
+\begin{abstract}
+The paper will present how to design 
+%The benefit of complementary metal-oxide-semiconductor (CMOS) technology scaling, resulting in smaller transistor sizes and a higher quantity within the same wafer area, has spurred interest in implementing time-domain oversampling in Analog-to-Digital Converters (ADCs). Voltage-Controlled Oscillators (VCO) have become increasingly popular for designing oversampling ADCs due to their simplicity, high digitization capabilities, and low voltage supply. This thesis proposes the design of a low-power VCO-based ADC for IoT applications. The primary objectives include noise reduction, enhanced power efficiency, improved VCO linearity and SNR, and increased resolution. This proposed VCO-ADC was implemented in Skywater’s 130 nm technology. The ADC’s sampling frequency can sweep from 200 to 500 MHz, corresponding to an input bandwidth of 0.1 to 2 MHz. The SNR can range from 44.5 to 71.9 dB for a bandwidth range of 0.1 to 2 MHz. The ADC consumes 0.0432 mW at a power-supplied voltage of 1.3–1.5 V.
+\end{abstract}
+
+\begin{IEEEkeywords}
+Voltage-Controlled Oscillator (VCO), oversampling (${\Delta\Sigma}$) ADC, VCO-based ADC, time-domain ADC, low-power ADC, CMOS.
+\end{IEEEkeywords}
+
+\IEEEpeerreviewmaketitle
+\section{Introduction}
+%\IEEEPARstart{T}{he} emergence of the Internet of Things (IoTs) has ushered in a transformative era in technology, symbolizing the 
+\setlength{\parindent}{10pt}
+Nowadays, IoT has evoled into a sprawing ecosystem with far-reaching implications across various fields (Fig 1.1), including healthcare, agriculture, smart homes, manufacturing, etc. IoT enables remote patient monitoring, smart medical devices, and wearable health technologies in healthcare. Moreover, IoT aids in precision farming by providing realtime data on soil conditions and crop health. Smart homes leverage IoT to enhance security, energy efficiency, and convenience through interconnected devices like air conditioners, televisions, camera, etc.\\
+
+\begin{figure}[h]
+\includegraphics[width=0.5\textwidth, center]{figure_1}
+\caption{Some IoT application.}
+\label{fig:figure2}
+\end{figure}
+
+\setlength{\parindent}{10pt}
+At the moment, there are billions of connected devices across the IoT. This is shown through predictions about the development of the IoT. K. Rose et al. provide predictions in \cite{rose2015internet} about how the IoT will affect the global economy and the Internet in the near future. The article offers insights on the evolution of IoT in the coming years from several signigicant research organizations and corporations. According to an article, Huawei aims to establish 100 billion IoT connections by 2025. 
+
+\setlength{\parindent}{10pt}
+With billions of connected devices, IoT devices are engineered to focus on compactness, flexibility, and energy efficiency. The imperative for low power consumption arise from the need for these devices to operate for extended periods without frequent battery replacements. In various cases, their compactness and flexibility allow them to be integrated into special applications. This thesis targets solving the problem of the power consumption of IoT devices. In practice, I will design the VCO-based ADC circuit for low-cost, low-power devices. In the IoT, the wireless connection is key in guaranteeing flexibility. 
+
+\section{VCO-Based ADC structure}
+\subsection{VCO-Based ADC Basics}
+\subsection{VCO-Based Integrator}
+%\subsubsection{Subsubsection Heading Here}
+\subsection{First-Order VCO-Based ADC}
+\subsection{The Proposed Circuit Design}
+\section{Design Process}
+%\subsection{Structure of ADC}
+\subsection{First-Order VCO}
+\subsection{VCO-Based ADC}
+
+\section{Simulation and Evaluation Results}
+
+\section{Conclusion}
+
+% use section* for acknowledgment
+\section*{Acknowledgment} %* is no header number
+The authors would like to thank...
+
+\ifCLASSOPTIONcaptionsoff
+  \newpage
+\fi
+
+%Reference
+
+\bibliographystyle{IEEEtran}
+\bibliography{ref}
+
+\end{document}
